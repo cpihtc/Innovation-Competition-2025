@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 210 40% 98%;
+    --foreground: 210 20% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 210 20% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 20% 12%;
+
+    --primary: 195 85% 45%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 195 85% 38%;
+
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 210 20% 12%;
+
+    --muted: 210 40% 96%;
+    --muted-foreground: 210 15% 50%;
+
+    --accent: 195 80% 92%;
+    --accent-foreground: 195 85% 35%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 30% 88%;
+    --input: 210 30% 88%;
+    --ring: 195 85% 45%;
+
+    --radius: 0.75rem;
+
+    --gradient-hero: linear-gradient(135deg, hsl(195 85% 45%), hsl(195 85% 35%));
+    --shadow-soft: 0 2px 8px -2px hsl(210 20% 12% / 0.08);
+    --shadow-medium: 0 4px 16px -4px hsl(210 20% 12% / 0.12);
+  }
+
+  .dark {
+    --background: 210 20% 8%;
+    --foreground: 210 40% 98%;
+
+    --card: 210 20% 12%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 210 20% 12%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 195 85% 50%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 195 85% 42%;
+
+    --secondary: 210 20% 16%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 210 20% 16%;
+    --muted-foreground: 210 20% 65%;
+
+    --accent: 195 85% 20%;
+    --accent-foreground: 195 85% 85%;
+
+    --destructive: 0 84% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 20% 20%;
+    --input: 210 20% 20%;
+    --ring: 195 85% 50%;
+    
+    --gradient-hero: linear-gradient(135deg, hsl(195 85% 50%), hsl(195 85% 40%));
+    --shadow-soft: 0 2px 8px -2px hsl(0 0% 0% / 0.2);
+    --shadow-medium: 0 4px 16px -4px hsl(0 0% 0% / 0.3);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
